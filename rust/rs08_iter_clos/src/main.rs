@@ -49,7 +49,20 @@ fn main() {
 
 	//<Your code here>
 
+	let odd_ints: Vec<_> = ints.iter().filter(|x| *x%2 != 0).collect();
+
+	println!("Odd ints:");
+	for i in odd_ints.iter() {
+		println!("int: {}", i);
+	}
+
 	//TODO: Create a vector of double all of the even values in ints using iterators
 
 	//<Your code here>
+	let mut even_ints: Vec<_> = ints.iter().filter(|x| *x%2 == 0).map(|x| x*2).collect();
+
+	println!("even ints:");
+	for i in even_ints.iter() {
+		println!("int: {}", i);
+	}
 }

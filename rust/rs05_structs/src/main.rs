@@ -30,11 +30,28 @@ impl Rectangle {
 trait Shape {
 	fn area(&self) -> i32;
 	fn contains(&self, p: Point) -> bool;
+
 }
 
 //TODO: Provide an implementation of the Shape trait for Rectangle
 
 //<Your code here>
+impl Shape for Rectangle {
+	fn area(&self) -> i32{
+		self.width * self.height
+	}
+	fn contains(&self, p: Point) -> bool{
+
+		if self.top_left.0 <= p.0 && p.0 <= self.width + self.top_left.0 && self.top_left.1 <= p.1 && p.1 <=  self.top_left.1  + self.height {
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+}
+
+
 
 fn print_area<T: Shape> (some_shape: T) {
 	println!("Shape's area: {}", some_shape.area());

@@ -14,6 +14,8 @@ fn main() {
 	//TODO: Assign 6.1 to x without modifying the code above
 	
 	//<Your code here>
+	let x: f64 = 0.1 + f64::from(x);
+
 
 	println!("This is float x: {}", x);
 
@@ -25,10 +27,10 @@ fn main() {
 	println!("boolean test: {}", b);
 
 
-	let y: u8 = 254;
+	let y: u16 = 254;
 
 	// This will panic at runtime during development, overflow in a release
-	let z: u8 = y + 3;
+	let z: u16 = y + 3;
 
 	println!("y: {}, z: {}", y, z);
 }

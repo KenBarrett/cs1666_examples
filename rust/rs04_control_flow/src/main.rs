@@ -47,10 +47,17 @@ fn main() {
 	//TODO: Use a for loop to print out the ints from 0-9 (inclusive)
 
 	//<Your code here>
+	for n in 0..10{
+		println!("In for, i: {}" ,n);
+	}
+
 
 	//TODO: Use a for loop to print out the ints from 1-10 (inclusive)
 
 	//<Your code here>
+	for n in 1..11{
+		println!("In for, i: {}", n)
+	}
 
 	// loop
 	let mut n = 6;
